@@ -5,4 +5,5 @@ app_name='all_reviews'
 
 urlpatterns = [
     path('',views.all, name='all'),
+    path('<int:alls_id>/',views.detail, name='detail'),
 ]

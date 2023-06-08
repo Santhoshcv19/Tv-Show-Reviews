@@ -1,0 +1,11 @@
+{% extends 'tvshowss/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<h1 class="text-center mt-5" id="alsdetailtitle">{{ als.title }}</h1>
+
+{{ als.description|safe }}
+
+{% endblock %}
