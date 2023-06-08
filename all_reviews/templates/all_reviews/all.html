@@ -1,0 +1,23 @@
+{% extends 'tvshowss/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<h1 id="blogtitle" class="font-weight-bold text-center">Reviews</h1>
+<h3 class="text-center mb-5">My Reviews on my favourite TV Shows</h3>
+{% for rev in revs %}
+<div class="row justify-content-center my-3">
+  <div class="col-md-10">
+    {% if rev.url %}
+        <a href="{{ project.url }}">
+            <img src="{{ project.image.url }}" class="img-fluid mb-2">
+        </a>
+    {% else %}
+        <img height="200" width="200" src="{{ rev.image.url }}" class="img-fluid mb-2">
+    {% endif %}
+    <h2>{{ rev.title }}</h2>
+    <h4>{{ rev.description|striptags|truncatechars:100 }}</h4>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}
