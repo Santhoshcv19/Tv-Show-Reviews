@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-t!9qbn4bjdd^7sjf9c+&5k*ai=j3r93aif@ic=e1g^*a23dtqs'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tvshowreviews.pythonanywhere.com']
 
 
 # Application definition
@@ -128,3 +128,8 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+try:
+    from .local_setting import *
+except ImportError:
+    print("No local file, you must be on production")
