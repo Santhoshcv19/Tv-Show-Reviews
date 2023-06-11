@@ -3,7 +3,6 @@
 {% load static %}
 
 {% block content %}
-    <div style="background: linear-gradient(to bottom, white, #808080);">
 
         <div class="row justify-content-center my-3">
             <div class="col-5">
@@ -16,7 +15,6 @@
                 <h1 id="hometext" class="font-weight-bold"> Tv Shows Review</h1>
             </div>
         </div>
-    </div>
     <br>
     <br>
     <div class="row">
@@ -32,16 +30,16 @@
             {% endif %}
             <a href="{% url 'all_reviews:detail' project.id %}"><h2>{{ project.title }}</h2></a>
             <h5>{{ project.description|striptags|truncatechars:50 }}</h5>
-      
-      
+    
+    
         </div>
         {% endfor %}
-      </div>
-      <div style="height:200px;width:200px;float: right;">
+    </div>
+    <div style="height:200px;width:200px;float: right;">
         <p align="right">
             <a role="button" href="{% url 'all_reviews:all' %}" class="btn btn-secondary">View All</a>
         </p>
-      </div>
+    </div>
         
 
 {% endblock %}
