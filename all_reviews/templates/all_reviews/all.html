@@ -17,7 +17,7 @@
     {% endif %}
     <br>
     <a href="{% url 'all_reviews:detail' rev.id %}"><h2>{{ rev.title }}</h2></a>
-    <h4>{{ rev.description|striptags|truncatechars:100 }}</h4>
+    <h4>{{ rev.description|striptags|truncatechars:15 }}</h4>
   </div>
 </div>
 {% endfor %}

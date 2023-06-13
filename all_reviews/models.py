@@ -8,7 +8,7 @@ class alls(models.Model):
     url=models.URLField(blank=True)
     description=HTMLField()
 
-    tags = TaggableManager()
+    tags = TaggableManager(blank=True)
 
     def __str__(self):
         return self.title
