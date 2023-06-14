@@ -18,6 +18,8 @@
     <br>
     <a style= "text-decoration:none;" href="{% url 'all_reviews:detail' rev.id %}"><h2>{{ rev.title }}</h2></a>
     <h4>{{ rev.description|striptags|truncatechars:15 }}</h4>
+    <br>
+    <br>
   </div>
 </div>
 {% endfor %}
