@@ -28,7 +28,7 @@
         
             <img height="200" width="200" src="{{ project.image.url }}" class="img-fluid mb-2">
             {% endif %}
-            <a href="{% url 'all_reviews:detail' project.id %}"><h2>{{ project.title }}</h2></a>
+            <a style= "text-decoration:none;" href="{% url 'all_reviews:detail' project.id %}"><h2>{{ project.title }}</h2></a>
             <h5>{{ project.description|striptags|truncatechars:15 }}</h5>
     
     

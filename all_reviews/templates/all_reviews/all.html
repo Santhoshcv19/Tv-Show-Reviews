@@ -16,7 +16,7 @@
         <img height="200" width="200" src="{{ rev.image.url }}" class="img-fluid mb-2">
     {% endif %}
     <br>
-    <a href="{% url 'all_reviews:detail' rev.id %}"><h2>{{ rev.title }}</h2></a>
+    <a style= "text-decoration:none;" href="{% url 'all_reviews:detail' rev.id %}"><h2>{{ rev.title }}</h2></a>
     <h4>{{ rev.description|striptags|truncatechars:15 }}</h4>
   </div>
 </div>
