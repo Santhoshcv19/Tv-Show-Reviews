@@ -9,8 +9,8 @@
 <div class="row justify-content-center my-3">
   <div class="col-md-10">
     {% if rev.url %}
-        <a href="{{ project.url }}">
-            <img src="{{ project.image.url }}" class="img-fluid mb-2">
+        <a href="{{ rev.url }}">
+            <img height="200" width="200" src="{{ rev.image.url }}" class="img-fluid mb-2">
         </a>
     {% else %}
         <img height="200" width="200" src="{{ rev.image.url }}" class="img-fluid mb-2">
