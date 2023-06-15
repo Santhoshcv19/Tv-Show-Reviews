@@ -7,8 +7,16 @@
 }
 
 body {
+    padding: 3em;
     font-family: 'Georgia', sans-serif;
 }
+img {
+    transition: transform .5s;
+  }
+  
+  img:hover {
+    transform: scale(0.75);
+  }
 
 #blogtitle {
     font-size: 6rem;

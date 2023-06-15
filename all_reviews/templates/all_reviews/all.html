@@ -15,10 +15,10 @@
     {% else %}
         <img height="200" width="200" src="{{ rev.image.url }}" class="img-fluid mb-2">
     {% endif %}
-    <span class="nowrap">
+    <span>
       <p>Genres:</p>
       {% for tag in rev.tags.all %}
-        <p>{{tag}}</p>
+        <p>{{tag }}</p>
       {% endfor %}
     </span> 
 
