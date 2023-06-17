@@ -12,11 +12,11 @@ body {
 }
 img {
     transition: transform .5s;
-  }
+}
   
-  img:hover {
+img:hover {
     transform: scale(0.75);
-  }
+}
 
 #blogtitle {
     font-size: 6rem;

@@ -32,7 +32,7 @@
                 <p>{{tag}}</p>
             {% endfor %}
             <a style= "text-decoration:none;" href="{% url 'all_reviews:detail' project.id %}"><h2>{{ project.title }}</h2></a>
-            <h5>{{ project.description|striptags|truncatechars:15 }}</h5>
+            <h5>{{ project.description|striptags }}</h5>
     
     
         </div>
