@@ -4,15 +4,16 @@
 
 {% block content %}
 
-        <div class="row justify-content-center my-3">
+    <div class="full">
+        <!-- <div class="row justify-content-center my-3">
             <div class="col-5">
-                <img src="{% static 'tvshowss/ports.jpg' %}" class="img-fluid">
+                <img src="{% static 'tvshowss/ports.jpg' %}" class="img-fluid"><--collage pic>
             </div>
-        </div> 
+        </div>  -->
         
-        <div class="row justify-content-center mb-3">
-            <div class="col-md-9 text-center">
-                <h1 id="hometext" class="font-weight-bold"> Tv Shows Review</h1>
+        <div class="row3">
+            <div class="row3txt">
+                <p> Tv Shows Review</p>
             </div>
         </div>
     <br>
@@ -22,7 +23,7 @@
         <div class="col-lg-4 col-md-6">
                 {% if project.url %}
             <a href="{{ project.url }}">
-                <img height="200" width="200" src="{{ project.image.url }}" class="img-fluid mb-2">
+                <img height="200" width="200" src="{{ project.image.url }}" class="img-fluid-mb-2">
             </a>
             {% else %}
         
@@ -31,7 +32,47 @@
             {% for tag in project.tags.all %}
                 <p>{{tag}}</p>
             {% endfor %}
-            <a style= "text-decoration:none;" href="{% url 'all_reviews:detail' project.id %}"><h2>{{ project.title }}</h2></a>
+            <a class="summa" style= "text-decoration:none;" href="{% url 'all_reviews:detail' project.id %}"><h2>{{ project.title }}</h2></a>
+            <h5>{{ project.description|striptags }}</h5>
+    
+    
+        </div>
+        {% endfor %}
+    </div>
+    <div >
+        <p align="right">
+            <a role="button" href="{% url 'all_reviews:all' %}" class="btn btn-secondary">View All</a>
+        </p>
+    </div>
+    </div>
+        <!-- <div class="row justify-content-center my-3">
+            <div class="col-5">
+                <img src="{% static 'tvshowss/ports.jpg' %}" class="img-fluid"><--collage pic>
+            </div>
+        </div>  -->
+        
+        <!-- <div class="row3">
+            <div class="row3txt">
+                <p> Tv Shows Review</p>
+            </div>
+        </div>
+    <br>
+    <br>
+    <div class="row">
+        {% for project in projects %}
+        <div class="col-lg-4 col-md-6">
+                {% if project.url %}
+            <a href="{{ project.url }}">
+                <img height="200" width="200" src="{{ project.image.url }}" class="img-fluid-mb-2">//
+            </a>
+            {% else %}
+        
+            <img height="200" width="200" src="{{ project.image.url }}" class="img-fluid mb-2">
+            {% endif %}
+            {% for tag in project.tags.all %}
+                <p>{{tag}}</p>
+            {% endfor %}
+            <a class="summa" style= "text-decoration:none;" href="{% url 'all_reviews:detail' project.id %}"><h2>{{ project.title }}</h2></a>
             <h5>{{ project.description|striptags }}</h5>
     
     
@@ -42,7 +83,7 @@
         <p align="right">
             <a role="button" href="{% url 'all_reviews:all' %}" class="btn btn-secondary">View All</a>
         </p>
-    </div>
+    </div> -->
         
 
 {% endblock %}
