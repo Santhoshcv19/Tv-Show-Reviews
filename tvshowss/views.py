@@ -3,5 +3,5 @@ from django.http import HttpResponse
 from .models import reviews
 
 def home(request):
-    projects = reviews.objects.order_by('-title')[:3]
+    projects = reviews.objects.order_by('-title')[:6]
     return render(request, 'tvshowss/home.html', {'projects':projects})
